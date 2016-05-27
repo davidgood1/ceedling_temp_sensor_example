@@ -6,6 +6,7 @@
 #include "MockAdcConductor.h"
 #include "MockTimerConductor.h"
 #include "MockIntrinsicsWrapper.h"
+#include "MockProtocolConductor.h"
 
 void setUp(void)
 {
@@ -21,8 +22,9 @@ void testInitShouldCallInitOfAllConductorsAndTheModel(void)
   UsartConductor_Init_Expect();
   AdcConductor_Init_Expect();
   TimerConductor_Init_Expect();
+  ProtocolConductor_Init_Expect();
   Interrupt_Enable_Expect();
-  
+
   Executor_Init();
 }
 
@@ -31,6 +33,7 @@ void testRunShouldCallRunForEachConductorAndReturnTrueAlways(void)
   UsartConductor_Run_Expect();
   TimerConductor_Run_Expect();
   AdcConductor_Run_Expect();
+  ProtocolConductor_Run_Expect();
 
   TEST_ASSERT_EQUAL(TRUE, Executor_Run());
 }

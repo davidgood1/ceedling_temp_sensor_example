@@ -4,6 +4,7 @@
 #include "UsartConductor.h"
 #include "TimerConductor.h"
 #include "AdcConductor.h"
+#include "ProtocolConductor.h"
 #include "IntrinsicsWrapper.h"
 
 
@@ -13,6 +14,7 @@ void Executor_Init(void)
   UsartConductor_Init();
   AdcConductor_Init();
   TimerConductor_Init();
+  ProtocolConductor_Init();
   Interrupt_Enable();
 }
 
@@ -21,5 +23,6 @@ bool Executor_Run(void)
   UsartConductor_Run();
   TimerConductor_Run();
   AdcConductor_Run();
+  ProtocolConductor_Run();
   return TRUE;
 }
