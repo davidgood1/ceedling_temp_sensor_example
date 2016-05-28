@@ -1,6 +1,7 @@
 #include "Types.h"
 #include "ProtocolHardware.h"
 #include "Usart.h"
+#include "ProtocolParser.h"
 
 void ProtocolHardware_Init(void)
 {
