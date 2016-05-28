@@ -9,6 +9,8 @@
  * The Hardware interface is responsible for getting and sending Protocol frames
  * through the USART.
  */
+#ifndef PROTOCOL_HARDWARE_H
+#define PROTOCOL_HARDWARE_H
 
 /**
  * @brief Initializes the Protocol Hardware
@@ -29,3 +31,5 @@ char* ProtocolHardware_GetFrame(void);
  * the response once it returns.
  */
 void ProtocolHardware_SendResponse(char *response);
+
+#endif /* PROTOCOL_HARDWARE_H */

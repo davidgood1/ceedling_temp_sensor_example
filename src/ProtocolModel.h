@@ -41,6 +41,8 @@
  *     the @ProtocolStatusCodeEnum definitions.
  *     Example: Status Good = [S100]
  */
+#ifndef PROTOCOL_MODEL_H
+#define PROTOCOL_MODEL_H
 
 /**
  * @brief Initializes the Model
@@ -61,3 +63,5 @@ void ProtocolModel_ReceiveFrame(char *frame);
  * @returns A pointer to a response frame a response is ready, NULL otherwise
  */
 char* ProtocolModel_GetResponse(void);
+
+#endif  /* PROTOCOL_MODEL_H */

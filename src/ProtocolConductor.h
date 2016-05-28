@@ -10,6 +10,8 @@
  * and Hardware parts of the module.  It looks for events in the Model and
  * passes them to the Hardware, and vice versa.
  */
+#ifndef PROTOCOL_CONDUCTOR_H
+#define PROTOCOL_CONDUCTOR_H
 
 /**
  * @brief Initializes the entire Protocol module
@@ -20,3 +22,5 @@ void ProtocolConductor_Init(void);
  * @brief Runs the conductor
  */
 void ProtocolConductor_Run(void);
+
+#endif /* PROTOCOL_CONDUCTOR_H */
