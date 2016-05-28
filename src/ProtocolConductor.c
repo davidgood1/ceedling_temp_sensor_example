@@ -11,5 +11,10 @@ void ProtocolConductor_Init(void)
 
 void ProtocolConductor_Run(void)
 {
-
+    char *frame;
+    frame = ProtocolHardware_GetFrame();
+    if (frame != NULL)
+    {
+        ProtocolModel_ReceiveFrame(frame);
+    }
 }

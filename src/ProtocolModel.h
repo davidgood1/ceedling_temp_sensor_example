@@ -46,3 +46,11 @@
  * @brief Initializes the Model
  */
 void ProtocolModel_Init(void);
+
+/**
+ * @brief Accepts incoming frames for processing by the Model
+ *
+ * @note This function does not hold the frame pointer and is finished with the
+ * frame once it returns.
+ */
+void ProtocolModel_ReceiveFrame(char *frame);

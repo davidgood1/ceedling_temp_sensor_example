@@ -14,3 +14,10 @@
  * @brief Initializes the Protocol Hardware
  */
 void ProtocolHardware_Init(void);
+
+/**
+ * @brief Gets a received frame from the underlying hardware
+ *
+ * @returns A pointer to a complete frame if a frame is ready, NULL otherwise
+ */
+char* ProtocolHardware_GetFrame(void);
