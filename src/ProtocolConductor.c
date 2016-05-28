@@ -17,4 +17,10 @@ void ProtocolConductor_Run(void)
     {
         ProtocolModel_ReceiveFrame(frame);
     }
+
+    frame = ProtocolModel_GetResponse();
+    if (frame != NULL)
+    {
+        ProtocolHardware_SendResponse(frame);
+    }
 }

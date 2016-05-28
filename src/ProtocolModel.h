@@ -54,3 +54,10 @@ void ProtocolModel_Init(void);
  * frame once it returns.
  */
 void ProtocolModel_ReceiveFrame(char *frame);
+
+/**
+ * @brief Gets a response from the Model
+ *
+ * @returns A pointer to a response frame a response is ready, NULL otherwise
+ */
+char* ProtocolModel_GetResponse(void);

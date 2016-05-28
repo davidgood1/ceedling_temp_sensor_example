@@ -21,3 +21,11 @@ void ProtocolHardware_Init(void);
  * @returns A pointer to a complete frame if a frame is ready, NULL otherwise
  */
 char* ProtocolHardware_GetFrame(void);
+
+/**
+ * @brief Sends a response frame to the underlying hardware
+ *
+ * @note This function does not hold the response pointer and is finished with
+ * the response once it returns.
+ */
+void ProtocolHardware_SendResponse(char *response);
