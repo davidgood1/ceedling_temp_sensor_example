@@ -40,3 +40,15 @@ void test_GetFrame_Should_ReturnFrame_When_ParserDetectsFrame(void)
 
     TEST_ASSERT_EQUAL_STRING("[S0]", ProtocolHardware_GetFrame());
 }
+
+void test_SendResponse_Should_PassEntireResponseToUart(void)
+{
+    Usart_PutChar_Expect('[');
+    Usart_PutChar_Expect('S');
+    Usart_PutChar_Expect('1');
+    Usart_PutChar_Expect('0');
+    Usart_PutChar_Expect('0');
+    Usart_PutChar_Expect(']');
+
+    ProtocolHardware_SendResponse("[S100]");
+}

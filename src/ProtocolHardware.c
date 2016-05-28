@@ -18,3 +18,12 @@ char* ProtocolHardware_GetFrame(void)
 
     return NULL;
 }
+
+void ProtocolHardware_SendResponse(char *response)
+{
+    while (*response != 0)
+    {
+        Usart_PutChar(*response);
+        ++response;
+    }
+}

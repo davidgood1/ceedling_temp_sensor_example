@@ -23,3 +23,13 @@ void Usart_Init(void);
  * data, not buffer empty.
  */
 char Usart_GetChar(void);
+
+/**
+ * @brief Puts a character into the Usart transmit buffer
+ *
+ * @param ch A single character to transmit
+ *
+ * @note If the Usart transmit buffer is full, this function will
+ * block until the USART can accept the character.
+ */
+void Usart_PutChar(char ch);
