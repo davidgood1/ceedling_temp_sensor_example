@@ -1,0 +1,17 @@
+Ceedling example project with expanded content from the Udemy class.
+
+https://www.udemy.com/unit-testing-and-other-embedded-software-catalysts/
+
+This project was started by running the command:
+
+ceedling example temp_sensor ceedling_temp_sensor_example
+
+It was expanded to include a very simple protocol which was partially developed in the Udemy class.
+
+You can run the test by cloning the repo and then running:
+rake clean
+rake test:all
+
+This will verify that all of the unit tests are working, however this project has not been tested on actual hardware as it was developed to explore MVC concepts with an embedded command protocol.
+
+Feel free to improve this example!!!
