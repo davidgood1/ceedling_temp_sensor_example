@@ -1,6 +1,5 @@
-#include <stddef.h>
 #include <ctype.h>
-#include <stdint.h>
+#include "Types.h"
 #include "ProtocolParser.h"
 #include "ProtocolModel.h"
 

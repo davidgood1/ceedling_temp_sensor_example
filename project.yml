@@ -40,17 +40,25 @@
     - *common_defines
     - TEST
 
+:test_runner:
+  :includes:
+  - Types.h
+
 :cmock:
   :when_no_prototypes: :warn
   :enforce_strict_ordering: TRUE
   :plugins:
     - :ignore
+    - :callback
   :treat_as:
     uint8:    HEX8
     uint16:   HEX16
     uint32:   UINT32
     int8:     INT8
     bool:     UINT8
+  :includes_h_pre_orig_header:
+    - Types.h
+
 
 #:tools:
 # Ceedling defaults to using gcc for compiling, linking, etc.
