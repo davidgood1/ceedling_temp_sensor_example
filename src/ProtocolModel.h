@@ -28,6 +28,7 @@
  *     Response data is the filtered temperature value in Celsius as an ASCII
  *     encoded string of the form "%.1f"
  *     Example: A response frame with the temperature of 27.5 C = [T432372e35]
+ *     If the temperature sensor has failed, the response will be [T1FF]
  *
  * V - Get the firmware version
  *     No command data
@@ -70,5 +71,15 @@ void ProtocolModel_ReceiveFrame(char *frame);
  * @returns A pointer to a response frame a response is ready, NULL otherwise
  */
 char* ProtocolModel_GetResponse(void);
+
+/**
+ * @brief Converts a standard string into a string of hex characters
+ *
+ * This function is only meant to be used internally and is only exposed
+ * to facilitate testing.
+ *
+ * @returns A pointer to the converted string, or NULL if there was an error
+ */
+char *ProtocolModel_StrToHexStr(char *str);
 
 #endif  /* PROTOCOL_MODEL_H */
