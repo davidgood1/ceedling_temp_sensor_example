@@ -14,13 +14,22 @@ void ProtocolModel_Init(void)
 
 void ProtocolModel_ReceiveFrame(char *frame)
 {
+    char cmd;
     if (frame == NULL)
     {
         _responseReady = 0;
+        return;
     }
-    else {
+
+    _responseReady = 1;
+    cmd = *(frame + 1);
+    switch (cmd)
+    {
+    case 'S':
+        strcpy(_frame, "[S100]");
+        break;
+    default:
         strcpy(_frame, "?");
-        _responseReady = 1;
     }
 }
 

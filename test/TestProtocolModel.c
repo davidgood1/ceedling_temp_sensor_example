@@ -39,3 +39,10 @@ void test_GetResponse_Should_RespondNull_After_GetResponse(void)
     TEST_ASSERT_EQUAL_STRING("?", ProtocolModel_GetResponse());
     TEST_ASSERT_NULL(ProtocolModel_GetResponse());
 }
+
+void test_ReceiveFrame_Should_RespondOkToStatusCommand(void)
+{
+    ProtocolModel_ReceiveFrame("[S0]");
+
+    TEST_ASSERT_EQUAL_STRING("[S100]", ProtocolModel_GetResponse());
+}
