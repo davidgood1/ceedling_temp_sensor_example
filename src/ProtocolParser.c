@@ -1,6 +1,8 @@
 #include <stddef.h>
 #include <ctype.h>
+#include <stdint.h>
 #include "ProtocolParser.h"
+#include "ProtocolModel.h"
 
 typedef enum _PARSER_STATE_T {
     PARSER_LOOKING_FOR_START = 0,
@@ -12,7 +14,7 @@ typedef enum _PARSER_STATE_T {
 
 static PARSER_STATE_T _state = PARSER_LOOKING_FOR_START;
 
-static char _buffer[PROTOCOL_PARSER_BUFFER_LENGTH_MAX];
+static char _buffer[PROTOCOL_BUFFER_LENGTH_MAX];
 static unsigned int _index = 0;
 static unsigned int _remainingDataChars = 0;
 

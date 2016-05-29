@@ -17,8 +17,6 @@
 #ifndef PROTOCOL_PARSER_H
 #define PROTOCOL_PARSER_H
 
-#define PROTOCOL_PARSER_BUFFER_LENGTH_MAX  (23) /**< Assumes max data bytes of 9 and space for NULL */
-
 /**
  * @brief Adds a character to the parser
  *

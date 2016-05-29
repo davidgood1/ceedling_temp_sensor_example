@@ -44,6 +44,8 @@
 #ifndef PROTOCOL_MODEL_H
 #define PROTOCOL_MODEL_H
 
+#define PROTOCOL_BUFFER_LENGTH_MAX  (23) /**< Assumes max data bytes of 9 and space for NULL */
+
 /**
  * @brief Initializes the Model
  */
