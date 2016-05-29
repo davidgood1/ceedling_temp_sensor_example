@@ -1,17 +1,59 @@
-Ceedling example project with expanded content from the Udemy class.
+Ceedling example project with expanded content from the Unity class
+-------------------------------------------------------------------
 
 https://www.udemy.com/unit-testing-and-other-embedded-software-catalysts/
 
-This project was started by running the command:
+Purpose
+-------
 
-ceedling example temp_sensor ceedling_temp_sensor_example
+This is just an example meant to explore using TDD (Test Driven Development) and MCH (Model-Controller-Hardware) design pattern concepts using the Ceedling suite of tools (Unity, CMock, etc.). Check them out at:
 
-It was expanded to include a very simple protocol which was partially developed in the Udemy class.
+http://www.throwtheswitch.org/
 
-You can run the test by cloning the repo and then running:
-rake clean
-rake test:all
+The project was started by running the command:
+    ceedling example temp_sensor ceedling_temp_sensor_example
 
-This will verify that all of the unit tests are working, however this project has not been tested on actual hardware as it was developed to explore MVC concepts with an embedded command protocol.
+It was then expanded to include a very simple protocol which was partially developed in the Udemy class.
+
+
+TDD and the Git History
+-----------------------
+
+The project itself isn't as interesting as the methods used to develop the project.  Since TDD is an iterative aproach to building software, the individual small steps that lead to the final result are interesting.  Knowing what to do next is often a challenge for people new to TDD methods.  This project has captured this iterative aproach in it's git history, where each commit is adding a new small bit of functionality to the project.
+
+Perhaps others would have chosen to take different steps at different times, but this is how I approached starting from an idea and using TDD to slowly work my way to done.  Also, the steps taken show how using CMock helps figure out the API of various components before actually spending time on the implementation.
+
+For me, looking at the git commit history using gitk is easier to understand than looking at the web interface, but YMMV.
+
+Also, there are some bone-headed mistakes in the repo recorded for all to see.  Welcome to software development ;)
+
+
+Documentation
+-------------
+
+The Protocol Module is documented in it's various header files (Protocol*.h).  See them for more info.
+
+
+Running the Tests
+-----------------
+
+You can run the tests by cloning the repo and then running:
+1. rake clean
+2. rake test:all
+
+This will verify that all of the unit tests are working, however this project has not been tested on actual hardware.  See the Limitations section for more details.
+
+
+Limitations
+-----------
+
+The Usart Hardware portion of the new D(I)H module is not implemented.
+There are a lot of extra files that were part of the original example project that probably need to be removed, but were not really related to the Purpose of the experiments.
+
 
 Feel free to improve this example!!!
+
+Thanks
+------
+
+Thanks to all of the folks at throwtheswitch.org and on the mailing list.  They are very kind and helpful!
